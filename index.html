@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>ReactJS CDN</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        const heading = React.createElement("h1", { style: { color: "blue", textAlign: "center" } }, "Topics covered");
+        const para1 = React.createElement("p", { style: { textAlign: "center", marginLeft:"20%", marginRight:"20%" } }, "The following is a list of all the topics we cover in the MDN learning area.");
+        const link = React.createElement("a",{ 
+      href: "https://developer.mozilla.org/", 
+      target: "_blank",
+      style: { color: "blue", textDecoration: "underline", marginLeft:"40%", marginRight:"20%" }
+    }, "Getting started with the web");
+    const para2 = React.createElement("p",{ style: { textAlign: "center",  marginLeft:"20%", marginRight:"20%" } }, "Provides a practical introduction to web development for complete beginners." );
+    
+    const link1 = React.createElement("a",{ 
+      href: "https://www.w3schools.com/html/", 
+      target: "_blank",
+      style: { color: "blue", textDecoration: "underline", marginLeft:"40%", marginRight:"20%" }
+    }, "HTML — Structuring the web");
+    const para3 = React.createElement("p",{ style: { textAlign: "center", marginLeft:"20%", marginRight:"20%" } }, "HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.");
+    
+    const link2 = React.createElement("a",{ 
+      href: "https://www.w3schools.com/css/default.asp", 
+      target: "_blank",
+      style: { color: "blue", textDecoration: "underline", marginLeft:"40%", marginRight:"20%" }
+    }, "CSS — Styling the web");
+    const para4 = React.createElement("p",{ style: { textAlign: "center", marginLeft:"20%", marginRight:"20%"} }, "CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS." );
+    
+
+    const container = React.createElement("div",null, heading, para1, link, para2, link1, para3, link2, para4);
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(container);
+    </script>
+</body>
+</html>
